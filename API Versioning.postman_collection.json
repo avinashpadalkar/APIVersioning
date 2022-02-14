@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "cd4c447d-cabf-467a-ada6-7504f3a9c052",
+		"name": "API Versioning",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "URI_PATH_DEMO",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-VERSION",
+						"value": "2",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Accept-Version",
+						"value": "1",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/URI_PATH_DEMO/v2/call",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"URI_PATH_DEMO",
+						"v2",
+						"call"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QUERY_PARAMETER_DEMO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/QUERY_PARAMETER_DEMO/call?api-version=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"QUERY_PARAMETER_DEMO",
+						"call"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CONTENT_NEGOTIATION_DEMO",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.v2+json",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.v3+json",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/CONTENT_NEGOTIATION_DEMO/call",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"CONTENT_NEGOTIATION_DEMO",
+						"call"
+					],
+					"query": [
+						{
+							"key": "mobile",
+							"value": "1234",
+							"disabled": true
+						},
+						{
+							"key": "api-version",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REQUEST_HEADER_DEMO",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-VERSION",
+						"value": "2",
+						"type": "default"
+					},
+					{
+						"key": "Accept-Version",
+						"value": "1",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/REQUEST_HEADER_DEMO/call",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"REQUEST_HEADER_DEMO",
+						"call"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

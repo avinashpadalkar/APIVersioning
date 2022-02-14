@@ -34,24 +34,33 @@ API Versioning
 
  - URI path versioning
 
-    update a version number in URL pathhttp://localhost:9000/partners/v1/patient/
+    update a version number in URL path
 
-    http://localhost:9000/partners/v2/patient/
+   http://localhost:8080/URI_PATH_DEMO/v1/call
+    http://localhost:8080/URI_PATH_DEMO/v2/call
 
  - URL parameter versioning
 
-    Version as a query string parameterhttp://localhost:9000/partners/patient?v=1.0
+    Version as a query string parameter 
+    http://localhost:8080/QUERY_PARAMETER_DEMO/call?api-version=1
+    http://localhost:8080/QUERY_PARAMETER_DEMO/call?api-version=2
 
  - Content Negotiation
 
-    Versioning with Content-type in the accept headerContent negotiation is the process of selecting one of the multiple possible representations to return to a client, based on client or server preferences.http://localhost:9000/partners/patientAccept:application/app.v1.patientAccept:application/app.v2.patient
+    Versioning with Content-type in the "accept" headerContent negotiation is the process of selecting one of the multiple possible representations to return to a client, based on client or server preferences.http://localhost:8080/CONTENT_NEGOTIATION_DEMO/call 
+    Accept:application/vnd.v2+json
+    Accept:application/vnd.v3+json
+    Accept:application/json
 
  - Request Header
 
     Custom Header to version API call
 
-    http://localhost:9000/partners/patient
+   http://localhost:8080/REQUEST_HEADER_DEMO/call
 
-    header - x-App-version : 1.0
+    Headers - X-API-VERSION : 1
+    Headers - X-API-VERSION : 2
 
 Ref Docs - https://docs.micronaut.io/latest/guide/#apiVersioning
+
+for Postman - Please import "API Versioning.postman_collection.json" this file  

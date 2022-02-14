@@ -11,13 +11,13 @@ class RequestHeaderVersioningApi {
 
     @Get("/call")
     fun callV1(): MutableHttpResponse<*>? {
-        return HttpResponse.ok("Calling V1")
+        return HttpResponse.ok("Calling REQUEST_HEADER_DEMO V1")
     }
 
     @Version("2")
     @Get("/call")
     fun callV2(): MutableHttpResponse<*>? {
-        return HttpResponse.ok("Calling V2")
+        return HttpResponse.ok("Calling REQUEST_HEADER_DEMO V2")
     }
 
 }
