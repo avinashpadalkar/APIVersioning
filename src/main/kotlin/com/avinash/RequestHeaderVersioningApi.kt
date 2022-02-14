@@ -6,11 +6,9 @@ import io.micronaut.http.MutableHttpResponse
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
 
-@Version("1")
 @Controller("/REQUEST_HEADER_DEMO")
 class RequestHeaderVersioningApi {
 
-    @Version("1")
     @Get("/call")
     fun callV1(): MutableHttpResponse<*>? {
         return HttpResponse.ok("Calling V1")
