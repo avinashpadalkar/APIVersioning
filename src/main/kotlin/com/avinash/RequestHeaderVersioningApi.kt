@@ -6,6 +6,7 @@ import io.micronaut.http.MutableHttpResponse
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
 
+@Version("1")
 @Controller("/REQUEST_HEADER_DEMO")
 class RequestHeaderVersioningApi {
 
