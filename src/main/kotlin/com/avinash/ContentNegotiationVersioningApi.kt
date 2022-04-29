@@ -6,22 +6,22 @@ import io.micronaut.http.MutableHttpResponse
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
 
-@Controller("/CONTENT_NEGOTIATION_DEMO")
+@Controller("/content_negotiation_demo")
 class ContentNegotiationVersioningApi {
 
     @Get("/call", consumes = [MediaType.APPLICATION_JSON], produces = [MediaType.APPLICATION_JSON])
     fun callV1(): MutableHttpResponse<*>? {
-        return HttpResponse.ok("Calling CONTENT_NEGOTIATION_DEMO V1")
+        return HttpResponse.ok("Calling V1")
     }
 
     @Get("/call", consumes = ["application/vnd.v2+json"], produces = ["application/vnd.v2+json"])
     fun callV2(): MutableHttpResponse<*>? {
-        return HttpResponse.ok("Calling CONTENT_NEGOTIATION_DEMO V2")
+        return HttpResponse.ok("Calling V2")
     }
 
     @Get("/call", consumes = ["application/vnd.v3+json"], produces = ["application/vnd.v3+json"])
     fun callV3(): MutableHttpResponse<*>? {
-        return HttpResponse.ok("Calling CONTENT_NEGOTIATION_DEMO V3")
+        return HttpResponse.ok("Calling V3")
     }
 
 }

@@ -6,18 +6,18 @@ import io.micronaut.http.MutableHttpResponse
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
 
-@Controller("/QUERY_PARAMETER_DEMO")
-class QueryParameterVersionApi {
+@Controller("/url_parameter_demo")
+class UrlParameterVersionApi {
 
     @Version("1")
     @Get("/call")
     fun callV1(): MutableHttpResponse<*>? {
-        return HttpResponse.ok("Calling QUERY_PARAMETER_DEMO V1")
+        return HttpResponse.ok("Calling V1")
     }
 
     @Version("2")
     @Get("/call")
     fun callV2(): MutableHttpResponse<*>? {
-        return HttpResponse.ok("Calling QUERY_PARAMETER_DEMO V2")
+        return HttpResponse.ok("Calling V2")
     }
 }

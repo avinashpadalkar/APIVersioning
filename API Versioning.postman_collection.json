@@ -24,15 +24,15 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8080/URI_PATH_DEMO/v2/call",
+					"raw": "http://localhost:8080/uri_path_demo/v1/call",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"URI_PATH_DEMO",
-						"v2",
+						"uri_path_demo",
+						"v1",
 						"call"
 					]
 				}
@@ -40,19 +40,19 @@
 			"response": []
 		},
 		{
-			"name": "QUERY_PARAMETER_DEMO",
+			"name": "URL_PARAMETER_DEMO",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/QUERY_PARAMETER_DEMO/call?api-version=2",
+					"raw": "http://localhost:8080/url_parameter_demo/call?api-version=2",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"QUERY_PARAMETER_DEMO",
+						"url_parameter_demo",
 						"call"
 					],
 					"query": [
@@ -73,7 +73,8 @@
 					{
 						"key": "Accept",
 						"value": "application/vnd.v2+json",
-						"type": "default"
+						"type": "default",
+						"disabled": true
 					},
 					{
 						"key": "Accept",
@@ -84,19 +85,18 @@
 					{
 						"key": "Accept",
 						"value": "application/json",
-						"type": "default",
-						"disabled": true
+						"type": "default"
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8080/CONTENT_NEGOTIATION_DEMO/call",
+					"raw": "http://localhost:8080/content_negotiation_demo/call",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"CONTENT_NEGOTIATION_DEMO",
+						"content_negotiation_demo",
 						"call"
 					],
 					"query": [
@@ -122,25 +122,19 @@
 				"header": [
 					{
 						"key": "X-API-VERSION",
-						"value": "2",
-						"type": "default"
-					},
-					{
-						"key": "Accept-Version",
 						"value": "1",
-						"type": "default",
-						"disabled": true
+						"type": "default"
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8080/REQUEST_HEADER_DEMO/call",
+					"raw": "http://localhost:8080/request_header_demo/call",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"REQUEST_HEADER_DEMO",
+						"request_header_demo",
 						"call"
 					]
 				}

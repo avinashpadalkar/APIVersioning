@@ -5,15 +5,15 @@ import io.micronaut.http.MutableHttpResponse
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
 
-@Controller("/URI_PATH_DEMO")
+@Controller("/uri_path_demo")
 class URIPathVersionApi {
     @Get("/v1/call")
     fun callV1(): MutableHttpResponse<*>? {
-        return HttpResponse.ok("Calling URI_PATH_DEMO V1")
+        return HttpResponse.ok("Calling V1")
     }
 
     @Get("/v2/call")
     fun callV2(): MutableHttpResponse<*>? {
-        return HttpResponse.ok("Calling URI_PATH_DEMO V2")
+        return HttpResponse.ok("Calling V2")
     }
 }

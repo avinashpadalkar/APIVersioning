@@ -36,14 +36,14 @@ API Versioning
 
     update a version number in URL path
 
-   http://localhost:8080/URI_PATH_DEMO/v1/call
-    http://localhost:8080/URI_PATH_DEMO/v2/call
+   http://localhost:8080/uri_path_demo/v1/call
+   http://localhost:8080/uri_path_demo/v2/call
 
  - URL parameter versioning
 
-    Version as a query string parameter 
-    http://localhost:8080/QUERY_PARAMETER_DEMO/call?api-version=1
-    http://localhost:8080/QUERY_PARAMETER_DEMO/call?api-version=2
+    Version as a query string parameter
+   http://localhost:8080/url_parameter_demo/call?api-version=1
+   http://localhost:8080/url_parameter_demo/call?api-version=2
 
  - Content Negotiation
 
@@ -51,12 +51,13 @@ API Versioning
     Accept:application/vnd.v2+json
     Accept:application/vnd.v3+json
     Accept:application/json
-
+   http://localhost:8080/content_negotiation_demo/call
+ - 
  - Request Header
+   This strategy lets you specify the version by creating custom headers using version numbers. In this API versioning strategy, we don’t need to modify the URL. Versioning gets handled through headers. Also, Its approach is easy to maintain and manageable, It required minimum code-related changes to implement. 
+   Custom Header to version API call
 
-    Custom Header to version API call
-
-   http://localhost:8080/REQUEST_HEADER_DEMO/call
+   http://localhost:8080/request_header_demo/call
 
     Headers - X-API-VERSION : 1
     Headers - X-API-VERSION : 2
